@@ -126,23 +126,17 @@ const Home = () => {
 
   // Personalization values with sane defaults
   const guest = (params.to || query.to || "Sahabat").replace(/\+/g, " ");
-  const child = (query.child || "Ananda").replace(/\+/g, " ");
-  const parent1 = "Bapak Setyo Budiawan";
-  const parent2 = "Ibu Shoimatu Tho'atin";
   const child1 = "M. Alfathan Setyo Putra";
   const child2 = "M. Fauzan Setyo Putra";
   const date = (query.date || "Minggu, 10 Agustus 2025").replace(/\+/g, " ");
   const time = (query.time || "09.00 WIB").replace(/\+/g, " ");
   const venue =
     "Dsn. Tugurejo RT. 01 RW. 01 Desa Sragi Kec. Talun, Kab. Blitar";
-  const address =
-    "Dsn. Tugurejo RT. 01 RW. 01 Desa Sragi Kec. Talun, Kab. Blitar";
   const mapsUrl = query.maps || "https://maps.google.com";
   const guestTC = titleCase(guest);
   const child1TC = titleCase(child1);
   const child2TC = titleCase(child2);
   const venueTC = titleCase(venue, { keepAcronyms: true });
-  const addressTC = titleCase(address, { keepAcronyms: true });
 
   // Auto-generate WhatsApp RSVP text if not provided
   const defaultWa = `https://wa.me/6281234567890?text=${encodeURIComponent(
